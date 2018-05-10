@@ -76,7 +76,7 @@ class App extends React.Component {
     }).then((data) => {
       const pagination = { ...this.state.pagination };
       // Read total count from server
-      // pagination.total = data.totalCount;
+      pagination.total = data.totalCount;
       pagination.total = 200;
       this.setState({
         loading: false,
